@@ -10,7 +10,7 @@ GROUP BY `users`.`username`;
 
 2 Seleziona tutti i post senza Like (13)
 
-* SELECT  `posts`.`title`
+* SELECT  `posts`.`title` AS `posts_without_likes`
 FROM `posts`
 LEFT JOIN likes ON `posts`.`id` = `likes`.`post_id`
 WHERE `likes`.`post_id` IS NULL;
