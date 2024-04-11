@@ -1,10 +1,10 @@
 1 Seleziona gli utenti che hanno postato almeno un video
 
-* SELECT `users`.`username`,  COUNT(*) AS 'uploaded_video'
+* SELECT `users`.`id`,`users`.`username`, COUNT(*) AS 'uploaded_video' 
   FROM `medias`
   JOIN `users` ON `users`.`id` = `medias`.`user_id`
   WHERE `medias`.`type` = 'video'
-  GROUP BY `users`.`username`;
+  GROUP BY `users`.`username`, `users`.`id`;
 
 
 2 Seleziona tutti i post senza Like (13)
