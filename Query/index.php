@@ -16,7 +16,8 @@ if ($connection && $connection->connect_error) {
   FROM `medias`
   JOIN `users` ON `users`.`id` = `medias`.`user_id`
   WHERE `medias`.`type` = 'video'
-  GROUP BY `users`.`username`, `users`.`id`;";
+  GROUP BY `users`.`username`, `users`.`id`
+  ORDER BY `uploaded_video` DESC;";
   $results = $connection->query($query);
   // var_dump($results);
 
@@ -72,13 +73,3 @@ if ($connection && $connection->connect_error) {
 
 
 
-<!--
-
-<div class="container">
-      
-        <div class="row">
-          <div><?php echo $row['uploaded_video'] ?></div>
-        </div>
-      </div>
-    
-    -->
