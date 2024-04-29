@@ -32,7 +32,7 @@ new Post(
     '2022-09-15', 'Luca Bianchi',
     ["mare", "sole", "relax", "spiaggia"],
     
-    [new Media("video", 'https://img.freepik.com/premium-photo/beach-vacation-happy-beautiful-woman-jeans-enjoying-sunny-day-beach_1428-1268.jpg')]
+    [new Media("video", 'https://www.youtube.com/embed/weMLRoeGPIM?si=TrEzcvkulApd4_uk')]
 ),
 new Post(
     'Serata tranquilla a gustare il tramonto',

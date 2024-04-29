@@ -27,7 +27,11 @@ require_once __DIR__ . '/database/db.php';
         <p><?= $post->formatDate() ?></p>
         <h5 class="card-title"><?= $post->title?></h5>
         <?php foreach($post->media as $media) : ?>
-  <img src="<?= $media->path  ?>" class="card-img-top" alt="...">
+        <?php if($media->type === 'photo') : ?>
+            <img src="<?= $media->path  ?>" class="card-img-top" alt="...">
+            <?php else : ?>
+                <iframe width="270rem;" height="300rem;" src="<?= $media->path ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <?php endif; ?>
   <?php endforeach; ?>
   <div class="card-body">
     <?php foreach($post->tags as $tags) : ?>
@@ -37,11 +41,7 @@ require_once __DIR__ . '/database/db.php';
         </div>
         <?php endforeach; ?>
             </div>
-        <!--
-
-        <iframe width="285rem;" src="https://www.youtube.com/embed/weMLRoeGPIM?si=TrEzcvkulApd4_uk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-        -->
+        
     </div>
 
 </div>
