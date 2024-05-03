@@ -13,6 +13,19 @@ class Media {
         $this->type = $type;
         $this->path = $path;
     }
+
+
+    
+    public function getType()
+    {
+        return $this->type;
+    }
+
+
+    public function getPath()
+    {
+        return $this->path;
+    }
 }
 
 
