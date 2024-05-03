@@ -22,12 +22,22 @@ require_once __DIR__ . '/database/db.php';
 
 <body class="bg-secondary-subtle">
     <header>
-    <nav class="navbar bg-body-tertiary fixed-top ">
-  <div class="container-fluid">
-    <img width="200px;" src="./assests/img/logo.png" alt="logo_boolean">
     
-  </div>
-</nav>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+        <div class="container-fluid">
+        <img width="200px;" src="./assests/img/logo.png" alt="logo_boolean">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-link active ps-5" aria-current="page" href="./Diagramma ER/index.html">Diagramma ER</a>
+                <a class="nav-link active" href="./Query/index.php">Query</a>
+                
+            </div>
+            </div>
+        </div>
+        </nav>
     </header>
     <main>
         <div class="container">
