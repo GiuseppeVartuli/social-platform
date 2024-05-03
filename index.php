@@ -48,9 +48,9 @@ require_once __DIR__ . '/database/db.php';
                                     <h5 class="card-title mb-0"><?= $post->user ?></h5>
                                 </div>
                                 <!-- Date -->
-                                <p class="card-text small fst-italic"><?= $post->formatDate() ?></p>
+                                <p class="card-text small fst-italic ps-2 "><?= $post->formatDate() ?></p>
                                 <!-- Title -->
-                                <p class="card-text"><?= $post->title ?></p>
+                                <p class="card-text ps-2"><?= $post->title ?></p>
                                 <!-- Media -->
                                 <?php foreach($post->media as $media) : ?>
                                     <?php if($media->type === 'photo') : ?>
