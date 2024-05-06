@@ -29,6 +29,7 @@ GROUP BY `posts`.`id`;
 FROM `medias`
 JOIN `users` ON `medias`.`user_id` = `users`.`id`
 GROUP BY `users`.`id`
+--- having 'uploaded_media' >= 5 ---
 ORDER BY 'uploaded_media';
 
 

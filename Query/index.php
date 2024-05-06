@@ -21,7 +21,7 @@ if ($connection && $connection->connect_error) {
   $results = $connection->query($query);
   // var_dump($results);
 
-
+    $connection->close();
   ?>
 
 <!DOCTYPE html>
